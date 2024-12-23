@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --primary-black: #16423c;
+  --primary-green: #6a9c89;
+  --secondary-green: #c4dad2;
+  --primary-white: #e9efec;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--primary-white);
+}
+
+.left-image {
+  background-image: url('./assets/finance.jpg');
+  width: 40%;
+  height: 100vh;
+}
+
+.right-side {
+  width: 60%;
+  background-color: var(--primary-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.home-title {
+  font-size: 40px;
+  color: var(--primary-black);
+}
+
+.home-container {
+  display: flex;
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  max-width: 400px;
+  width: 70%;
+  margin: 30px 0;
+  color: var(--primary-black);
+}
+.login-form h1 {
+  text-align: center;
+}
+.login-form label {
+  margin: 4px 0;
+}
+.login-input {
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 15px;
+}
+.error-text {
+  color: red;
+  font-size: 14px;
+}
+.error-text:empty {
+  height: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+}
+
+.login-button {
+  background-color: var(--primary-green);
+  color: var(--primary-white);
+  width: 100px;
+  margin: 10px 0;
+  padding: 12px 20px;
+}
+.login-button:hover {
+  color: var(--primary-green);
+  outline: var(--primary-green);
+  transition: ease-in 0.2s;
+  background-color: var(--primary-white);
+}
+.new-user {
+  color: var(--primary-green);
+  text-align: center;
+}
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+nav {
+  position: sticky;
+  top: 0;
+  max-height: 100svh;
+  background-color: var(--primary-black);
+  height: 100%;
+  min-height: 100vh;
+}
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 2rem;
+  padding-block: 2rem;
+  font-size: 1.5rem;
+}
+.nav-list li {
+  padding: 1rem 2rem;
+  margin-left: 2rem;
+  border-radius: 100vw 0 0 100vw;
+}
+
+.nav-list li.active {
+  background: var(--primary-white);
+}
+
+.nav-list a {
+  color: var(--primary-green);
+  text-decoration: none;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.table-icon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+table {
+  width: 100%;
+}
+table th {
+  border: solid 1px black;
+  text-transform: capitalize;
+}
+table tr {
+}
+
+.table-icon:hover {
+}
+
+.icon-container {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/*
+Styles for income page
+*/
+
+.container {
+  width: 70%;
+  padding: 20px;
+  margin: 20px auto;
+  position: relative;
+}
+.row {
+  display: flex;
+  margin: 30px 0;
+}
+.col {
+  width: 100%;
+}
+
+.income-form {
+  margin: 0 auto;
+}
+.expense-form {
+  margin: 0 auto;
+}
+.pots-form {
+  margin: 0 auto;
+}
+.withdraw-money-form {
+  margin: 0 auto;
+}
+.income-btn {
+  background-color: var(--primary-green);
+  color: var(--primary-white);
+  width: 100%;
+  max-width: 125px;
+  font-size: 12px;
+  color: var(--primary-white);
+  height: 50px;
+}
+.income-btn:hover {
+  color: var(--primary-green);
+  outline: var(--primary-green);
+  transition: ease-in 0.2s;
+  background-color: var(--primary-white);
+}
+
+.top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.top-row h1 {
+  color: var(--primary-black);
+}
+
+#income-close {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#income-close:hover {
+  cursor: pointer;
+  filter: opacity(0.6);
+}
+
+#expense-close {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#expense-close:hover {
+  cursor: pointer;
+  filter: opacity(0.6);
+}
+
+#withdraw-money-close {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#withdraw-money-close {
+  cursor: pointer;
+  filter: opacity(0.6);
+}
+
+#pots-close {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pots-close:hover {
+  cursor: pointer;
+  filter: opacity(0.6);
+}
+
+.income-header {
+  font-size: 24px;
+  color: var(--primary-black);
+}
+
+.input-select {
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 15px;
+  outline: 1.5px solid var(--primary-black);
+  text-align: center;
+}
+
+.pots-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.pots-item {
+  width: 100%;
+  padding: 20px;
+  min-height: 250px;
+  border-radius: 20px;
+  color: var(--primary-white);
+  background-color: var(--primary-green);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.pots-item .top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.pots-item .top i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.pots-item .middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.pots-item .bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+.pots-button {
+  background-color: var(--primary-white);
+  color: var(--primary-green);
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px 20px;
+}
+.pots-button:hover {
+  background-color: var(--primary-green);
+  outline: 2px solid var(--primary-white);
+  color: var(--primary-white);
+  margin: 10px 0;
+  padding: 12px 20px;
+}
+
+.progress-border {
+  background-color: white;
+  width: 100%;
+  border-radius: 20px;
+  height: 10px;
+  margin: 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.progress-bar {
+  height: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: var(--secondary-green);
+}
+
+.add-money-form {
+  margin: 0 auto;
+  gap: 5px;
+}
+
+#add-money-close {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-money-close:hover {
+  cursor: pointer;
+  filter: opacity(0.6);
+}
+
+.add-money-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Tooltip Container */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip Trigger Buttons */
+.tooltip-trigger {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Tooltip Content */
+.tooltip-content {
+  display: none;
+  position: absolute;
+  top: 110%; /* Position below the trigger */
+  left: 50%;
+  transform: translateX(-55%);
+  background-color: #fff;
+  color: var(--primary-green);
+  padding: 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 14px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tooltip-btn {
+  cursor: pointer;
+}
+
+.delete-pot {
+  color: red;
+}
+
+@media (width < 900px) {
+  .left-image {
+    display: none;
+    width: 0%;
+  }
+  .right-side {
+    width: 100%;
+  }
+  .income-container {
+  }
+
+  .pots-grid {
+    grid-template-columns: 1fr;
+  }
+}
